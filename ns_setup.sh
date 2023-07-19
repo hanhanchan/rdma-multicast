@@ -25,7 +25,7 @@ sudo ip netns exec ns2 arp -s 10.10.10.4 42:1a:cb:44:54:a6
 
 # patronus
 sudo ip netns add ns3
-sudo ip link set ens2f0 netns ns3
+sudo ip link set ens2f2 netns ns3
 sudo ip netns exec ns3 ip link set lo up
 sudo ip netns exec ns3 ip link set ens2f2 up
 sudo ip netns exec ns3 ip addr add 10.10.10.3/24 dev ens2f2
@@ -38,7 +38,7 @@ sudo ip netns exec ns3 arp -s 10.10.10.4 42:1a:cb:44:54:a6
 
 
 sudo ip netns add ns4
-sudo ip link set ens2f1 netns ns4
+sudo ip link set ens2f3 netns ns4
 sudo ip netns exec ns4 ip link set lo up
 sudo ip netns exec ns4 ip link set ens2f3 up
 sudo ip netns exec ns4 ip addr add 10.10.10.4/24 dev ens2f3
